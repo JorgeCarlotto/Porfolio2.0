@@ -16,29 +16,30 @@ const about = () => {
         </div>
 
         <div className="about__content">
+
           <div className="about__cards">
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experiencie</h5>
               <small> Pilot Sar</small>
             </article>
-          </div>
+         
 
-          <div className="about__cards">
+         
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experiencie</h5>
               <small> Programation</small>
             </article>
-          </div>
+         
 
-          <div className="about__cards">
+         
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Proyects</h5>
               <small> Proyectos</small>
             </article>
-          </div>
+            </div>
 
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Aspernatur earum molestias sunt voluptatem optio tempora cupiditate nemo quam, 
