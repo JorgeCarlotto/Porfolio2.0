@@ -12,7 +12,7 @@ const Porfolio = () => {
         {
           porfolioDb.map(({id,image,title,github,demo})=>{
             return (
-              <article className="porfolio__item">
+              <article key={id} className="porfolio__item">
               <div className="porfolio__item-image">
                 <img src={image} alt={id +'img'} />
               </div>

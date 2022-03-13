@@ -1,6 +1,3 @@
-
-
-
 export const porfolioDb =[
     {
         id:1,
