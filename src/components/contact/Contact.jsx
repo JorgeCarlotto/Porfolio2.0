@@ -2,10 +2,23 @@ import React from 'react'
 import './Contact.css'
 import {AiOutlineMail} from 'react-icons/ai'
 import {BsWhatsapp,BsMessenger} from 'react-icons/bs'
-
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 
 const Contact = () => {
+
+const form = useRef();
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_cts2irn', 'template_fx303j5', form.current, 'oFXR7UlfmdkqO1MQf')
+
+    e.target.reset()
+  };
+
   return (
     <section id="contact">
       <h5>Vamos a hablar?</h5>
@@ -17,8 +30,8 @@ const Contact = () => {
           <article className= "contact__option">
             <AiOutlineMail className= "contact__options-icon"/>
             <h4>Email</h4>
-            <h5>jorge@gmail.com</h5>
-            <a href="mailto:jorge@gmail.com" target="_blank">Mandame un Correo</a>
+            <h5>jorgemcarlotto2@gmail.com</h5>
+            <a href="mailto:jorgemcarlotto2@gmail.com" target="_blank">Mandame un Correo</a>
           </article>
 
           
@@ -40,7 +53,7 @@ const Contact = () => {
 
         </div>
         
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder="Tu nombre completo " required />
           <input type="email" name="email" placeholder=" Tu Email" required /> 
           <textarea name="message" rows="7" placeholder="Tu mensaje" required />
@@ -50,5 +63,7 @@ const Contact = () => {
     </section>
   )
 }
+
+
 
 export default Contact
